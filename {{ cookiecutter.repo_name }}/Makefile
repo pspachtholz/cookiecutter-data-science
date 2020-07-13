@@ -22,8 +22,7 @@ endif
 
 ## Install Python Dependencies
 requirements: test_environment
-	@bash -c "source venv/bin/activate"
-	$(PYTHON_INTERPRETER) -m pip install -r requirements.txt
+	source venv/bin/activate && $(PYTHON_INTERPRETER) -m pip install -r requirements.txt
 
 ## Make Dataset
 data: requirements
@@ -66,7 +65,7 @@ endif
 		@echo ">>> New conda env created. Activate with:\nsource activate $(PROJECT_NAME)"
 else
 	$(PYTHON_INTERPRETER) -m venv venv
-	@echo ">>> New virtualenv created. Activate with:\source venv/bin/activate"
+	@echo ">>> New virtualenv created. Activate with:\nsource venv/bin/activate"
 endif
 
 ## Test python environment is setup correctly
