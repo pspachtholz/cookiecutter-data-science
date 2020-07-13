@@ -28,6 +28,10 @@ requirements: test_environment
 data: requirements
 	$(PYTHON_INTERPRETER) src/data/make_dataset.py data/raw data/processed
 
+## Run jupyter
+jupyter:
+	source venv/bin/activate && jupyter notebook notebooks
+
 ## Delete all compiled Python files
 clean:
 	find . -type f -name "*.py[co]" -delete
