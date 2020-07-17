@@ -16,7 +16,8 @@ pandas
 
 # ML ops
 mlflow
-dvc
+dvc[s3]
+
 
 # code quality
 pytest
